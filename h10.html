@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Exam Result</title>
+<style>
+body{text-align:center;background:lightblue}
+table{margin:auto;border-collapse:collapse}
+td,th{border:1px solid black;padding:8px}
+</style>
+</head>
+<body>
+
+<h2>Exam Result System</h2>
+
+<input id="n" placeholder="Name"><br><br>
+<input id="r" placeholder="Roll No"><br><br>
+<input id="m" type="number" placeholder="Maths"><br><br>
+<input id="s" type="number" placeholder="Science"><br><br>
+<input id="e" type="number" placeholder="English"><br><br>
+
+<button onclick="show()">Show Result</button>
+
+<table>
+<tbody id="out"></tbody>
+</table>
+
+<script>
+function show(){
+let t=+m.value + +s.value + +e.value;
+let p=t/3;
+let g=p>=75?"A":p>=60?"B":p>=40?"C":"Fail";
+
+out.innerHTML="<tr><th>Name</th><th>Roll</th><th>Total</th><th>%</th><th>Grade</th></tr><tr><td>"+n.value+"</td><td>"+r.value+"</td><td>"+t+"/300</td><td>"+p.toFixed(2)+"%</td><td>"+g+"</td></tr>";
+}
+</script>
+
+</body>
+</html>

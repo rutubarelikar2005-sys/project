@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Form</title>
+    <style>
+        body { background: lightyellow; font-family: Arial; }
+        input { margin: 5px; padding: 5px; }
+    </style>
+</head>
+<body>
+
+<h2>Employee Form</h2>
+
+<form onsubmit="return validate()">
+    Name: <input id="name" required><br>
+    Email: <input type="email" required><br>
+    Age: <input type="number" id="age" required><br>
+    <button type="submit">Submit</button>
+</form>
+
+<p id="msg"></p>
+
+<script>
+function validate() {
+    let age = document.getElementById("age").value;
+
+    if (age >= 18)
+        document.getElementById("msg").innerHTML = "Form Submitted Successfully!";
+    else
+        document.getElementById("msg").innerHTML = "Age must be 18 or above.";
+
+    return false;
+}
+</script>
+
+</body>
+</html>

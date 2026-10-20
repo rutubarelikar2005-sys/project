@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Grade Management</title>
+    <style>
+        body { font-family: Arial; background: lightyellow; }
+        input, button { margin: 8px; padding: 6px; }
+    </style>
+</head>
+<body>
+
+<h1>Student Grade System</h1>
+
+Enter Percentage:
+<input type="number" id="per" min="0" max="100">
+
+<button onclick="grade()">Check Grade</button>
+
+<p id="result"></p>
+
+<script>
+function grade() {
+    let p = Number(document.getElementById("per").value);
+    let g;
+
+    if (p < 0 || p > 100 || per.value == "") {
+        g = "Enter valid percentage";
+    } else if (p >= 90) {
+        g = "A Grade";
+    } else if (p >= 75) {
+        g = "B Grade";
+    } else if (p >= 60) {
+        g = "C Grade";
+    } else if (p >= 40) {
+        g = "D Grade";
+    } else {
+        g = "Fail";
+    }
+
+    document.getElementById("result").innerHTML = g;
+}
+</script>
+
+</body>
+</html>

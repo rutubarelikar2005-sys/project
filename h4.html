@@ -1,0 +1,36 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Employee Registration</title>
+    <style>
+        body { font-family: Arial; background: lightyellow; }
+        input, select { margin: 8px; padding: 6px; }
+    </style>
+</head>
+<body >  
+
+    <h1>Employee Registration</h1>
+
+    <form onsubmit="alert('Employee Registered Successfully!'); return false;">
+        Name: <input type="text" required><br><br>
+
+        Email: <input type="email" required><br><br>
+
+        Password: <input type="password" required><br><br>
+
+        Phone: <input type="tel" required><br><br>
+
+        Department:
+        <select>
+            <option>IT</option>
+            <option>HR</option>
+            <option>Finance</option>
+        </select>
+        <br><br>
+
+        <input type="submit" value="Register">
+    </form>
+
+</body>
+</html>

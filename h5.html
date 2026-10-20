@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <style>
+        body{background:lightblue; text-align:center;}
+    </style>
+</head>
+<body >
+
+<h1>College Library</h1>
+
+<a href="#books">Books</a> |
+<a href="#issue">Issue Book</a>
+
+<h2 id="books">Available Books</h2>
+
+<table border="1" align="center">
+    <tr><th>Book</th><th>Author</th></tr>
+    <tr><td>Python</td><td>John</td></tr>
+    <tr><td>Java</td><td>Smith</td></tr>
+</table>
+
+<h2 id="issue">Issue Book</h2>
+
+<form onsubmit="alert('Book Issued Successfully!'); return false;">
+    Student Name: <input type="text" required><br><br>
+    Book Name: <input type="text" required><br><br>
+    <input type="submit" value="Issue Book">
+</form>
+
+</body>
+</html>
+```
